@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
@@ -8,17 +10,32 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-    
-
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ojpms"/>
-            <property name="javax.persistence.jdbc.user" value="postgres"/>
-            <property name="javax.persistence.jdbc.password" value="tiger"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
+
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.postgresql.Driver"/>
+
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://dpg-dah91m142hec73fambc0-a:5432/ojpms_ure3"/>
+
+            <property name="javax.persistence.jdbc.user"
+                      value="ojpms_ure3_user"/>
+
+            <property name="javax.persistence.jdbc.password"
+                      value="tiget"/>
+
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+
+            <property name="hibernate.show_sql"
+                      value="true"/>
+
         </properties>
 
     </persistence-unit>
+
 </persistence>
+
