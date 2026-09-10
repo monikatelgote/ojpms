@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+
+/* ==========================================
+   SCHEDULE INTERVIEW CSS
+   Uses global.css for:
+   sidebar, cards, buttons, forms, layout
+   ========================================== */
+
+/* Interview Layout */
+
+.interview-layout{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:25px;
+    align-items:start;
+}
+
+/* Information Card */
+
+.info-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+    position:sticky;
+    top:20px;
+}
+
+.info-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#10b981,#059669);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:36px;
+    box-shadow:0 10px 25px rgba(16,185,129,.25);
+}
+
+.info-card h2{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:15px;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+.info-card p{
+    color:#64748b;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* Candidate & Job ID Boxes */
+
+.id-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 18px;
+    margin-top:15px;
+    border-radius:12px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    color:#475569;
+    font-weight:600;
+}
+
+.id-box strong{
+    color:#2563eb;
+}
+
+/* Information Points */
+
+.info-points{
+    margin-top:25px;
+}
+
+.info-points p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-align:left;
+    margin-bottom:12px;
+    color:#475569;
+    font-weight:500;
+}
+
+.info-points i{
+    color:#10b981;
+}
+
+/* Form Header */
+
+.card-header{
+    margin-bottom:25px;
+}
+
+.card-header h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#0f172a;
+    margin-bottom:8px;
+}
+
+.card-header p{
+    color:#64748b;
+}
+
+/* Select Box */
+
+select{
+    width:100%;
+}
+
+/* Schedule Button */
+
+.schedule-btn{
+    width:100%;
+    margin-top:10px;
+}
+
+/* Statistics Cards */
+
+.stat-card h2{
+    color:#10b981;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .interview-layout{
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+        position:static;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .info-icon{
+        width:75px;
+        height:75px;
+        font-size:30px;
+    }
+
+    .id-box{
+        flex-direction:column;
+        gap:8px;
+        text-align:center;
+    }
+
+}

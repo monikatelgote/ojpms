@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+/* Viewjob: horizontal job card 
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.job-info { flex: 1; }
+.job-info h2 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+.job-info p { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; line-height: 1.5; }
+.job-info strong { color: var(--text-primary); }
+
+.job-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 140px;
+}*/
+
+
+/* ==========================================
+   VIEW JOBS CSS
+   Uses global.css for:
+   sidebar, cards, buttons, layout, typography
+   ========================================== */
+
+/* Search Section */
+
+.search-box{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.search-box input[type="text"]{
+    flex:1;
+    min-width:250px;
+}
+
+/* Refresh Button */
+
+.refresh-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 20px;
+    border-radius:12px;
+    background:#64748b;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.refresh-btn:hover{
+    background:#475569;
+    transform:translateY(-2px);
+}
+
+/* Job Listing Container */
+
+.job-card{
+    margin-bottom:25px;
+    transition:.3s ease;
+}
+
+.job-card:hover{
+    transform:translateY(-4px);
+}
+
+/* Job Details */
+
+.job-card h2{
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.job-card p{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* Apply Area */
+
+.apply-btn{
+    min-width:180px;
+}
+
+/* Closed Badge */
+
+.closed-badge{
+    padding:14px;
+    border-radius:12px;
+    background:#fef2f2;
+    color:#dc2626;
+    font-weight:700;
+    text-align:center;
+}
+
+/* Empty State */
+
+.empty-jobs{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.empty-jobs i{
+    font-size:60px;
+    color:#94a3b8;
+    margin-bottom:15px;
+}
+
+.empty-jobs h2{
+    color:#475569;
+    margin-bottom:10px;
+}
+
+.empty-jobs p{
+    color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .search-box{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .search-box input[type="text"]{
+        min-width:100%;
+    }
+
+    .refresh-btn,
+    .apply-btn{
+        width:100%;
+    }
+
+    .job-card h2{
+        font-size:1.25rem;
+    }
+
+}

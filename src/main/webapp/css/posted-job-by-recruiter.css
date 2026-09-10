@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+/* Posted jobs specific card layout 
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.job-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.job-status {
+  background: #E7F5EE;
+  color: #057642;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-body {
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job-body p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.job-body strong { color: var(--text-primary); }
+
+.job-actions {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}*/
+
+
+/* ==========================================
+   POSTED JOB BY RECRUITER CSS
+   Uses global.css for:
+   sidebar, cards, buttons, page layout
+   ========================================== */
+
+/* Jobs Container */
+
+.jobs-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* Job Card */
+
+.job-card{
+    transition:.3s ease;
+    overflow:hidden;
+}
+
+.job-card:hover{
+    transform:translateY(-4px);
+}
+
+/* Job Header */
+
+.job-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.job-header h2{
+    color:#2563eb;
+    font-size:1.5rem;
+    font-weight:700;
+    margin:0;
+}
+
+/* Status Badge */
+
+.job-status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 16px;
+    border-radius:25px;
+    background:#ecfdf5;
+    color:#16a34a;
+    font-size:.85rem;
+    font-weight:700;
+    border:1px solid #bbf7d0;
+}
+
+/* Job Body */
+
+.job-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.job-body p,
+.info-row{
+    color:#475569;
+    line-height:1.8;
+}
+
+.job-body strong,
+.info-row strong{
+    color:#0f172a;
+}
+
+/* Action Buttons */
+
+.job-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.job-actions a{
+    text-decoration:none;
+}
+
+/* Applicants Button */
+
+.applicants-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 20px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.applicants-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* Statistics Card */
+
+.count-card{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.count-card h2{
+    font-size:2.5rem;
+    color:#2563eb;
+    margin-bottom:8px;
+    font-weight:800;
+}
+
+.count-card p{
+    color:#64748b;
+}
+
+/* Empty Jobs State */
+
+.empty-jobs{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.empty-jobs i{
+    font-size:70px;
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.empty-jobs h2{
+    color:#475569;
+    margin-bottom:10px;
+}
+
+.empty-jobs p{
+    color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .job-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .job-actions{
+        flex-direction:column;
+    }
+
+    .job-actions a{
+        width:100%;
+    }
+
+    .applicants-btn{
+        width:100%;
+    }
+
+    .job-header h2{
+        font-size:1.25rem;
+    }
+
+}

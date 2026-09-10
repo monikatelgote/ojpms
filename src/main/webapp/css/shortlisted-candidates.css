@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+
+/* ==========================================
+   SHORTLISTED CANDIDATES CSS
+   Uses global.css for:
+   sidebar, cards, buttons, layouts
+   ========================================== */
+
+/* Candidates Container */
+
+.candidate-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
+    gap:25px;
+}
+
+/* Candidate Card */
+
+.candidate-card{
+    transition:.3s ease;
+    overflow:hidden;
+}
+
+.candidate-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Card Header */
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:20px;
+}
+
+/* Avatar */
+
+.avatar{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#10b981,#059669);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+    flex-shrink:0;
+    box-shadow:0 10px 25px rgba(16,185,129,.25);
+}
+
+/* Candidate Name */
+
+.card-header h2{
+    margin:0;
+    color:#0f172a;
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+/* Shortlisted Badge */
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    margin-top:6px;
+    border-radius:20px;
+    background:#ecfdf5;
+    color:#16a34a;
+    font-size:.8rem;
+    font-weight:700;
+    border:1px solid #bbf7d0;
+}
+
+/* Card Body */
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.card-body p{
+    color:#475569;
+    line-height:1.7;
+    margin:0;
+}
+
+.card-body i{
+    width:22px;
+    color:#10b981;
+}
+
+/* Action Buttons */
+
+.card-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.card-actions a{
+    text-decoration:none;
+}
+
+/* Profile Button */
+
+.profile-btn{
+    flex:1;
+    min-width:140px;
+}
+
+/* Interview Button */
+
+.interview-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 18px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+    transition:.3s ease;
+    flex:1;
+    min-width:180px;
+}
+
+.interview-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* Statistics Card */
+
+.stat-card h2{
+    color:#16a34a;
+}
+
+/* Empty State */
+
+.empty-card{
+    grid-column:1/-1;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.empty-card i{
+    font-size:70px;
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.empty-card h2{
+    color:#475569;
+    margin-bottom:10px;
+}
+
+.empty-card p{
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .candidate-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .card-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .card-actions{
+        flex-direction:column;
+    }
+
+    .card-actions a{
+        width:100%;
+    }
+
+    .profile-btn,
+    .interview-btn{
+        width:100%;
+    }
+
+}

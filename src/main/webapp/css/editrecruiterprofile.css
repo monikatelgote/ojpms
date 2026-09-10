@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+/* ==========================================
+   EDIT RECRUITER PROFILE CSS
+   Uses global.css for:
+   sidebar, main, cards, forms, buttons
+   ========================================== */
+
+/* Profile Header */
+
+.profile-header{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    background:#fff;
+    padding:30px;
+    border-radius:24px;
+    margin-bottom:30px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+/* Recruiter Avatar */
+
+.profile-image{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:42px;
+    font-weight:800;
+    flex-shrink:0;
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.profile-header h1{
+    margin:0;
+    font-size:2rem;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.profile-header h3{
+    margin-top:8px;
+    color:#2563eb;
+    font-weight:600;
+}
+
+.profile-header p{
+    margin-top:10px;
+    color:#64748b;
+}
+
+/* Form Card */
+
+.form-card{
+    max-width:900px;
+}
+
+.form-card h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* Readonly Inputs */
+
+input[readonly]{
+    background:#f8fafc;
+    cursor:not-allowed;
+}
+
+/* Save Button */
+
+.update-btn{
+    width:100%;
+    margin-top:15px;
+}
+
+/* Information Card */
+
+.section-card p{
+    line-height:1.8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .profile-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .profile-image{
+        width:100px;
+        height:100px;
+        font-size:34px;
+    }
+
+    .profile-header h1{
+        font-size:1.6rem;
+    }
+
+}

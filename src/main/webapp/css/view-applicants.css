@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('global.css');
+
+
+/* ==========================================
+   VIEW APPLICANTS CSS
+   Uses global.css for:
+   sidebar, cards, buttons, layouts
+   ========================================== */
+
+/* Applicants Container */
+
+.applicants-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
+    gap:25px;
+}
+
+/* Applicant Card */
+
+.applicant-card{
+    transition:.3s ease;
+    overflow:hidden;
+}
+
+.applicant-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Card Header */
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:20px;
+}
+
+/* Profile Circle */
+
+.profile-circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+    flex-shrink:0;
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+/* Applicant Name */
+
+.card-header h2{
+    margin:0;
+    color:#0f172a;
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+/* Applied Status */
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    margin-top:6px;
+    border-radius:20px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:.8rem;
+    font-weight:700;
+    border:1px solid #bfdbfe;
+}
+
+/* Card Body */
+
+.card-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.card-body p{
+    color:#475569;
+    line-height:1.7;
+    margin:0;
+}
+
+.card-body i{
+    width:22px;
+    color:#2563eb;
+}
+
+/* Action Buttons */
+
+.card-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.card-actions a{
+    text-decoration:none;
+}
+
+/* Profile Button */
+
+.profile-btn{
+    flex:1;
+    min-width:140px;
+}
+
+/* Shortlist Button */
+
+.shortlist-btn{
+    flex:1;
+    min-width:140px;
+}
+
+/* Reject Button */
+
+.reject-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 18px;
+    border-radius:12px;
+    background:#ef4444;
+    color:#fff;
+    font-weight:600;
+    transition:.3s ease;
+    flex:1;
+    min-width:140px;
+}
+
+.reject-btn:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+/* Count Card */
+
+.count-card{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.count-card h2{
+    font-size:2.5rem;
+    color:#2563eb;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.count-card p{
+    color:#64748b;
+}
+
+/* Job Name */
+
+.job-name{
+    color:#64748b;
+    margin-top:5px;
+}
+
+/* Empty State */
+
+.empty-applicants{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.empty-applicants i{
+    font-size:70px;
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.empty-applicants h2{
+    color:#475569;
+    margin-bottom:10px;
+}
+
+.empty-applicants p{
+    color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .applicants-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .card-header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .card-actions{
+        flex-direction:column;
+    }
+
+    .card-actions a{
+        width:100%;
+    }
+
+    .profile-btn,
+    .shortlist-btn,
+    .reject-btn{
+        width:100%;
+    }
+
+}
