@@ -6,72 +6,61 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "applications")
 public class Application {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
-	@ManyToOne(cascade = CascadeType.PERSIST.ALL)
-	private Job job;
-	
-	@ManyToOne(cascade = CascadeType.PERSIST.ALL)
-	private User user;
-	
-	private String status="APPLIED";
-	
-	public Application() {
-		// TODO Auto-generated constructor stub
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	public Application(Job job, User user, String status) {
-		super();
-		this.job = job;
-		this.user = user;
-		this.status = status;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Job job;
 
-	public int getId() {
-		return id;
-	}
+    @ManyToOne(cascade = CascadeType.ALL)
+    private User user;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private String status;
 
-	public Job getJob() {
-		return job;
-	}
+    public Application() {
+    }
 
-	public void setJob(Job job) {
-		this.job = job;
-	}
+    public Application(Job job, User user, String status) {
+        this.job = job;
+        this.user = user;
+        this.status = status;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getStatus() {
-		return status;
-	}
+    public Job getJob() {
+        return job;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public void setJob(Job job) {
+        this.job = job;
+    }
 
-	@Override
-	public String toString() {
-		return "Application [id=" + id + ", job=" + job + ", user=" + user + ", status=" + status + "]";
-	}
-	
-	
-	
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
+
